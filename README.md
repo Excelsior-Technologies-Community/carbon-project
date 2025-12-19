@@ -1,59 +1,186 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PHP_Laravel12_Use_Carbon_In_Blade_And_Controller
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A complete Laravel 12 demonstration project that explains how to use **Carbon**, the powerful PHP DateTime library, inside **Controllers, Blade views, Models, Accessors, Scopes, and Seeders**.
 
-## About Laravel
+This repository is designed to help beginners and students clearly understand real‑world date and time handling in Laravel applications.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This project covers practical and commonly used Carbon operations such as:
 
-## Learning Laravel
+* Formatting dates and times
+* Manipulating dates (past and future)
+* Calculating age from birth date
+* Timezone conversion
+* Human‑readable time differences
+* Subscription expiry logic
+* Using Carbon directly in Blade templates
+* Using Carbon in Model accessors and query scopes
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+It is suitable for:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* Laravel beginners
+* MCA / BCA academic projects
+* Interview preparation
+* Real‑world Laravel reference
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Features
 
-### Premium Partners
+* Current date, time, and day formatting
+* Date manipulation (Yesterday, Tomorrow, Next Week, Last Month)
+* Timezone handling (New York, London)
+* Age calculation from birth date
+* Future and past date checking
+* Subscription expiry tracking
+* Human‑readable time using `diffForHumans()`
+* Carbon usage in Blade views
+* Model Accessors and Scopes using Carbon
+* Seeder with sample Carbon‑powered data
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## Technologies Used
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Laravel 12
+* Carbon (nesbot/carbon)
+* MySQL or SQLite
+* Bootstrap 5
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Project Screenshots
 
-## Security Vulnerabilities
+<img width="602" height="261" alt="image" src="https://github.com/user-attachments/assets/5f149c37-a0cd-4421-bd38-b0d1b85cfa57" />
+<img width="1634" height="441" alt="image" src="https://github.com/user-attachments/assets/b751b0b3-74f1-4c57-abd9-1b08c27535a1" />
+<img width="1722" height="674" alt="image" src="https://github.com/user-attachments/assets/f8a05680-b4d9-414f-b7ee-83b6ca851e1e" />
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## Installation Guide
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/your-username/carbon-project.git
+cd carbon-project
+```
+
+### Step 2: Install Dependencies
+
+```bash
+composer install
+npm install
+```
+
+### Step 3: Environment Setup
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Update your database credentials in the `.env` file:
+
+```env
+DB_DATABASE=carbon_project
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Step 4: Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### Step 5: Run Seeder
+
+```bash
+php artisan db:seed --class=UserProfileSeeder
+```
+
+### Step 6: Start the Development Server
+
+```bash
+php artisan serve
+```
+
+Open your browser and visit:
+
+```
+http://localhost:8000
+```
+
+---
+
+## Usage
+
+Visit the following URLs:
+
+| Page                  | URL                                                                            |
+| --------------------- | ------------------------------------------------------------------------------ |
+| Carbon Demo Dashboard | [http://localhost:8000/profiles](http://localhost:8000/profiles)               |
+| Create Profile        | [http://localhost:8000/profiles/create](http://localhost:8000/profiles/create) |
+| Carbon Calculations   | Click the "View Calculations" button                                           |
+
+---
+
+## Project Structure
+
+```
+app/
+ └── Models/
+      └── UserProfile.php
+
+app/
+ └── Http/Controllers/
+      └── UserProfileController.php
+
+resources/
+ └── views/
+      └── profiles/
+           ├── index.blade.php
+           ├── create.blade.php
+           └── calculations.blade.php
+
+database/
+ └── seeders/
+      └── UserProfileSeeder.php
+```
+
+---
+
+## Carbon Examples Used
+
+```php
+use Carbon\Carbon;
+
+Carbon::now();
+Carbon::yesterday();
+Carbon::tomorrow();
+Carbon::parse('2024-01-01');
+Carbon::now()->addDays(30);
+Carbon::now('America/New_York');
+Carbon::now()->diffForHumans();
+```
+
+---
+
+## Final Notes
+
+This repository is intentionally kept simple and readable.
+
+It is ideal for:
+
+* Learning Carbon step by step
+* Understanding real‑world date logic
+* Academic submissions
+* Laravel interview preparation
+
+You are free to extend this project with authentication, subscriptions, or reports.
+
+If you find this project helpful, consider giving it a star on GitHub.
